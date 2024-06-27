@@ -1,18 +1,19 @@
 import { People } from "./people.model";
 
 export class Cook extends People {
-    public  Recipe : string;
+    public  declarationMessage : string;
 
 constructor (
-    Recipe : string,
+    declarationMessage : string,
         name: string,
         age : number,
         gender : string,
         address : string,
+        
 
 
 ){
     super(name, age, gender, address);
-    this.Recipe = Recipe;
+    this.declarationMessage = declarationMessage;
 }
 }

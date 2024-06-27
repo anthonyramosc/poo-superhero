@@ -1,10 +1,10 @@
 import { People } from "./people.model";
 
-export class Judge extends People {
-    public  Autority : string;
+export class Executioner extends People {
+    public  hachazo : string;
 
 constructor (
-    Autority : string,
+    hachazo : string,
         name: string,
         age : number,
         gender : string,
@@ -13,6 +13,6 @@ constructor (
 
 ){
     super(name, age, gender, address);
-    this.Autority = Autority;
+    this.hachazo = hachazo;
 }
 }
