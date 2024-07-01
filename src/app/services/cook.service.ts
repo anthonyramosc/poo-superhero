@@ -9,7 +9,6 @@ export class CookService {
       
   constructor() {
       this.cook = new Cook(
-        'Pastel de franbuesa',
         'Alex Calle',
         32,
         'Male',
@@ -22,6 +21,6 @@ export class CookService {
    }
 
    declarationMessage(): string {
-    return 'Realice un pastel hermoso pero lo deje aqui durante una hora';
-   }
+    return this.cook.declarationMessage();
+  }
 }

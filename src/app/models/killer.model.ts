@@ -1,18 +1,22 @@
 import { People } from "./people.model";
 
-export class Killer extends People {
-    public isSilence : string;    
+export class Killer extends People {   
 
 constructor (
-    isSilence : string,
         name: string,
         age : number,
         gender : string,
         address : string,
-
-
 ){
     super(name, age, gender, address);
-    this.isSilence = isSilence;
 }
+
+testimonyK() : string {
+    return `Estuve en mi casa solo y descansando, la verdad nose que tengo que ver aqui, si yo soy italiano, *Muestra su tobillo*`
+}
+
+finalMessage() : string {
+    return `No me importa que me maten, yo volvere y jamas lo dejare en paz, ¡¡¡¡¡RECUERDENME!!!!!`
+}
+
 }

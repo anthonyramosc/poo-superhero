@@ -9,7 +9,6 @@ export class ExecutionerService {
 
   constructor() {
     this.executioner = new Executioner(
-      'I`ve a axe and i loved kill',
       'MANUELITO',
       50,
       'Male',
@@ -22,6 +21,6 @@ export class ExecutionerService {
   }
 
   hachazo(): string {
-    return '!Slash! "sonido de cabeza rodando"'
+    return this.executioner.hachazo();
   }
 }

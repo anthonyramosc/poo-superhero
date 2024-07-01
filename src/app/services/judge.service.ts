@@ -9,12 +9,10 @@ export class JudgeService {
 
   constructor() {
     this.judge = new Judge(
-      'Mas alta',
       'Damian Olivo',
       59,
       'Male',
-      '40-2Street',
-      'Culpable'
+      '40-2Street'
     );
    }
 
@@ -22,7 +20,12 @@ export class JudgeService {
     return this.judge;
    }
 
-   verdict() : string{
-    return 'Culpable';
-   }
+   Veredict() : string{
+    return this.judge.Veredict();
+  }
+
+    Execute(): string{
+      return this.judge.Execute();
+    }
+
 }

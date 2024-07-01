@@ -15,4 +15,8 @@ constructor (
     super(name, age, gender, address);
     this.dateElected = dateElected;
 }
+
+ Promise(): string{
+    return `Juro que te vengare hijo mio `
+ }
 }
