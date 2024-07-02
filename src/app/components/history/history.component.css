@@ -5,76 +5,76 @@
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .History-title {
+}
+
+.History-title {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .History-title h1 {
+}
+
+.History-title h1 {
     font-size: 24px;
     margin: 10px 0;
     color: #333;
-  }
-  
-  .History-title h3 {
+}
+
+.History-title h3 {
     font-size: 20px;
     margin: 5px 0;
     color: #555;
-  }
-  
-  .names {
+}
+
+.names {
     color: #007bff;
-  }
-  
-  .intro, .beginning, .development, .end, .image {
+}
+
+.intro, .beginning, .development, .end, .image {
     margin: 20px 0;
-  }
-  
-  .intro h3, .beginning h3, .development h3, .end h3, .image h3 {
+}
+
+.intro h3, .beginning h3, .development h3, .end h3, .image h3 {
     font-size: 22px;
     color: #333;
     margin-bottom: 10px;
-  }
-  
-  .intro p, .beginning p, .development p, .end p, .image p {
+}
+
+.intro p, .beginning p, .development p, .end p, .image p {
     font-size: 16px;
     color: #666;
     margin: 5px 0;
-  }
-  
-  .navigation-buttons {
+}
+
+.navigation-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-  }
-  
-  .navigation-buttons button {
+}
+
+.navigation-buttons button {
     background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .navigation-buttons button[disabled] {
+}
+
+.navigation-buttons button[disabled] {
     background-color: #ccc;
     cursor: not-allowed;
-  }
-  
-  /* Specific styles for character names and sections */
-  .singer, .police, .cook, .killer, .judge, .executioner, .regent {
+}
+
+/* Specific styles for character names and sections */
+.singer, .police, .cook, .killer, .judge, .executioner, .regent {
     color: #007bff;
-  }
-  
-  .singer p, .police p, .cook p, .killer p, .judge p, .executioner p, .regent p {
+}
+
+.singer p, .police p, .cook p, .killer p, .judge p, .executioner p, .regent p {
     font-size: 16px;
     color: #666;
-  }
-  
-  .evidence, .testimony1, .testimony2, .testimony3, .murder, .present, .sentence, .execution, .message, .died, .promise {
+}
+
+.evidence, .testimony1, .testimony2, .testimony3, .murder, .present, .sentence, .execution, .message, .died, .promise {
     font-style: italic;
     color: #333;
-  }
+}
