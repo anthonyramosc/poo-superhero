@@ -1,55 +1,128 @@
-<div class="History-countainer">
-    <div class="History-title">Asi Perdi a mi HIjo
-        <h1 class="names">Personajes</h1>
-        <h2>{{regent.name}}</h2>
-        <h2>{{police.name}}</h2>
-        <h2>{{killer.name}}</h2>
-        <h2>{{judge.name}}</h2>
-        <h2>{{singer.name}}</h2>
-        <h2>{{cook.name}}</h2>
-        <h2>{{executioner.name}}</h2>
- </div>
- <div class="History">
-        <h2 class="singer">{{singer.name}}</h2>
-                <p class="singer">{{singer.findDied}}</p>
-            <h3>A la escena llega un policia</h3>
-        <h2 class="police">{{police.name}} </h2>
-            <h3>El oficial revisa la escena y encuentra</h3>
-                <p class="evidence">{{haveEvidence}}</p>
-            <h3>El oficial interroga a los sospechosos</h3>
-        <h2 class="police">{{police.name}} </h2>
-                <p class="testimony1">{{needTestimony}}</p>
-        <h2 class="singer">{{singer.name}}</h2>
-                <p class="Rtestimony1">{{testimonyS}}</p>
-        <h2 class="police">{{police.name}} </h2>
-                <p class="testimony2">{{needMoreTestimony}}</p>
-        <h2 class="cook">{{cook.name}}</h2>
-                <p class="Rtestimony2">{{declarationMessage}}</p>
-        <h2 class="police">{{police.name}} </h2>
-                <p class="testimony3">{{needOneMoreTestimony}}</p>
-        <h2 class="killer">{{killer.name}}</h2>
-                <p class="Rtestimony3">{{testimonyK}}</p>
-            <h3>El oficial interroga al asesino y lo descubre</h3>
-        <h2 class="police">{{police.name}} </h2>
+<div class="History-container">
+        <nz-card>
+          <div class="History-title">
+            Así Perdí a mi Hijo
+            <h1 class="names">Personajes</h1>
+            <h3>{{ regent.name }}</h3>
+            <h3>{{ police.name }}</h3>
+            <h3>{{ killer.name }}</h3>
+            <h3>{{ judge.name }}</h3>
+            <h3>{{ singer.name }}</h3>
+            <h3>{{ cook.name }}</h3>
+            <h3>{{ executioner.name }}</h3>
+          </div>
+        </nz-card>
+      
+        <nz-list nzBordered [nzDataSource]="sections.slice(currentIndex, currentIndex + 1)" [nzRenderItem]="item">
+          <ng-template #item let-item>
+            <nz-list-item>
+              <ng-container [ngSwitch]="item">
+                <ng-container *ngSwitchCase="'intro'">
+                  <h3 class="intro">Introducción</h3>
+                  <h3 class="singer">{{ singer.name }}</h3>
+                        <p class="singer">{{ singer.findDied }}</p>
+                        <h3>A la escena llega un policia</h3>
+                        <h3>class="police">{{ police.name }}</h3>
+          <h3>El oficial revisa la escena y encuentra</h3>
+          <p class="evidence">{{ haveEvidence }}</p>
+                 <ng-container *ngSwitchCase="'singer'">
+                        
+        </ng-container>
+                </ng-container>
+                <ng-container *ngSwitchCase="'beginning'">
+                  <h3 class="beginning">desarrollo</h3>
+                  <h3>El oficial interroga a los sospechosos</h3>
+                  <h3 class="police">{{ police.name }}</h3>
+                  <p class="testimony1">{{ needTestimony }}</p>
+                  <h3 class="singer">{{ singer.name }}</h3>
+          <p class="Rtestimony1">{{ testimonyS }}</p>
+          <p class="testimony2">{{ needMoreTestimony }}</p>
+          <h3 class="police">{{ police.name }}</h3>
+          <h3 class="cook">{{ cook.name }}</h3>
+          <p class="Rtestimony2">{{ declarationMessage }}</p>
+          <h3 class="police">{{ police.name }}</h3>
+          <p class="testimony3">{{ needOneMoreTestimony }}</p>
+          <h3 class="killer">{{ killer.name }}</h3>
+          <p class="Rtestimony3">{{ testimonyK }}</p>
+          <h3>El oficial interroga al asesino y lo descubre</h3>
+        <h3 class="police">{{police.name}} </h3>
                 <p class="murder">{{haveMurder}}</p>
-            <h3>El oficial lleva al asesino ante el juez</h3>
-        <h2 class="police">{{police.name}} </h2>
-                <p class="present">{{Presentation}}</p>
-            <h3>El juez dicta sentencia</h3>
-        <h2 class="judge">{{judge.name}}</h2>
-                <p class="sentence">{{Veredict}}</p>
-            <h3>El asesino es ejecutado</h3>
-        <h2 class="judge">{{judge.name}}</h2>
-                <p class="execution">{{Execute}}</p>
-        <h2 class="killer">{{killer.name}}</h2>
-                <p class="message">{{finalMessage}}</p>
-        <h2 class="executioner">{{executioner.name}}</h2>
-                <p class="died">{{hachazo}}</p>
-            <h3>El asesino muere pero a lo lejos un hombre ve la cabeza de su hijo rodar y jura venganza contra todos su opresores</h3>
-            <h3 class="regent">{{regent.name}}</h3>
-                <p class="promise">{{Promise}}</p>
+                <h3>El oficial lleva al asesino ante el juez</h3>
+                <h3 class="police">{{police.name}} </h3>
+                        <p class="present">{{Presentation}}</p>
+                    <h3>El juez dicta sentencia</h3>
+                <h3 class="judge">{{judge.name}}</h3>
+                        <p class="sentence">{{Veredict}}</p>
 
-
-
- </div>
-</div>
+                </ng-container>
+                <ng-container *ngSwitchCase="'end'">
+                        <h3>El asesino es ejecutado</h3>
+                        <h3 class="judge">{{judge.name}}</h3>
+                        <p class="execution">{{Execute}}</p>
+                        <h3 class="killer">{{ killer.name }}</h3>
+                  <h3 class="end">Fin</h3>
+                  <p class="message">{{ finalMessage }}</p>
+                  <h3 class="executioner">{{ executioner.name }}</h3>
+                  <p class="died">{{ hachazo }}</p>
+                  <h3>El asesino muere pero a lo lejos un hombre ve la cabeza de su hijo rodar y jura venganza contra todos su opresores</h3>
+                  <h3 class="regent">{{ regent.name }}</h3>
+          <p class="promise">{{ Promise }}</p>
+                </ng-container>
+              </ng-container>
+            </nz-list-item>
+          </ng-template>
+        </nz-list>
+      
+        <div class="navigation-buttons">
+          <button nz-button nzType="default" (click)="prev()" [disabled]="currentIndex === 0">Previous</button>
+          <button nz-button nzType="default" (click)="next()" [disabled]="currentIndex === sections.length - 1">Next</button>
+        </div>
+      </div>
+      
+      <ng-template #developmentContent>
+        <!-- Aquí puedes poner el contenido detallado del desarrollo -->
+        <ng-container *ngSwitchCase="'singer'">
+          <h3 class="singer">{{ singer.name }}</h3>
+          <p class="singer">{{ singer.findDied }}</p>
+          <h3 class="singer">{{ singer.name }}</h3>
+          <p class="Rtestimony1">{{ testimonyS }}</p>
+        </ng-container>
+        <ng-container *ngSwitchCase="'police'">
+          <h3 class="police">{{ police.name }}</h3>
+          <h3>El oficial revisa la escena y encuentra</h3>
+          <p class="evidence">{{ haveEvidence }}</p>
+          <h3>El oficial interroga a los sospechosos</h3>
+          <h3 class="police">{{ police.name }}</h3>
+          <p class="testimony1">{{ needTestimony }}</p>
+          <h3 class="police">{{ police.name }}</h3>
+          <p class="testimony2">{{ needMoreTestimony }}</p>
+          <h3 class="police">{{ police.name }}</h3>
+          <p class="testimony3">{{ needOneMoreTestimony }}</p>
+          <h3 class="police">{{ police.name }}</h3>
+          <p class="murder">{{ haveMurder }}</p>
+          <h3 class="police">{{ police.name }}</h3>
+          <p class="present">{{ Presentation }}</p>
+        </ng-container>
+        <ng-container *ngSwitchCase="'cook'">
+          <h3 class="cook">{{ cook.name }}</h3>
+          <p class="Rtestimony2">{{ declarationMessage }}</p>
+        </ng-container>
+        <ng-container *ngSwitchCase="'killer'">
+          <h3 class="killer">{{ killer.name }}</h3>
+          <p class="Rtestimony3">{{ testimonyK }}</p>
+          <p class="message">{{ finalMessage }}</p>
+        </ng-container>
+        <ng-container *ngSwitchCase="'judge'">
+          <h3 class="judge">{{ judge.name }}</h3>
+          <p class="sentence">{{ Veredict }}</p>
+          <p class="execution">{{ Execute }}</p>
+        </ng-container>
+        <ng-container *ngSwitchCase="'executioner'">
+          <h3 class="executioner">{{ executioner.name }}</h3>
+          <p class="died">{{ hachazo }}</p>
+        </ng-container>
+        <ng-container *ngSwitchCase="'regent'">
+          <h3 class="regent">{{ regent.name }}</h3>
+          <p class="promise">{{ Promise }}</p>
+        </ng-container>
+      </ng-template>

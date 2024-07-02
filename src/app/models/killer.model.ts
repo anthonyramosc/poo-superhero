@@ -20,3 +20,10 @@ finalMessage() : string {
 }
 
 }
+
+export class KillerAlter extends People {
+
+    finalMessage() : string {
+        return `!!!!!!!!PAPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡`
+    }
+}
