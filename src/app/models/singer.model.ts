@@ -2,9 +2,8 @@ import { People } from "./people.model";
 import { Killer } from "./killer.model";
 
 export class Singer extends People {
-        public talent : string;
     constructor (
-        talent : string,
+        public talent : string,
         name : string,
         age : number,
         gender : string,
